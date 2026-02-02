@@ -10,6 +10,6 @@ respuesta = response.json()
 diccionario= respuesta[0]
 print("Nombre del país: ",diccionario['name']['common'])
 print("Capital: ",diccionario['capital'])
-print("Moneda: ",diccionario['currencies'])#Buscar aqui como acceder solo al nombre
+print("Moneda: ",list(diccionario['currencies'].values())[0]['name'])#Buscar aqui como acceder solo al nombre
 print("Continente: ",diccionario['continents'])
 
